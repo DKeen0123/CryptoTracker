@@ -8,4 +8,8 @@ describe('App', () => {
   it('renders correctly', () => {
     expect(app).toMatchSnapshot();
   });
+
+  it('renders a connected Wallet Component', () => {
+    expect(app.find('Connect(Wallet)').exists()).toBe(true);
+  });
 });
