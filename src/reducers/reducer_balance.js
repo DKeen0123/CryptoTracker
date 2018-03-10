@@ -1,12 +1,18 @@
 import * as constants from '../actions/constants';
 
 const balance = (state = 0, action) => {
+  let balance;
   switch (action.type) {
     case constants.SET_BALANCE:
-      return action.balance;
+      balance = action.balance;
+      break;
+    case constants.DEPOSIT:
+      balance = state + action.deposit;
+      break;
     default:
-      return state;
+      balance = state;
   }
+  return balance;
 };
 
 export default balance;
