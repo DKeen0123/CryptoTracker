@@ -9,6 +9,9 @@ const balance = (state = 0, action) => {
     case constants.DEPOSIT:
       balance = state + action.deposit;
       break;
+    case constants.WITHDRAW:
+      balance = state - action.withdrawal;
+      break;
     default:
       balance = state;
   }
