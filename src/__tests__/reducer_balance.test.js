@@ -1,4 +1,5 @@
 import balanceReducer from '../reducers/reducer_balance';
+import balanceReducer2 from '../reducers/reducer_balance';
 import * as constants from '../actions/constants';
 
 describe('balanceReducer', () => {
@@ -9,6 +10,12 @@ describe('balanceReducer', () => {
       expect(
         balanceReducer(undefined, { type: constants.SET_BALANCE, balance })
       ).toEqual(balance);
+    });
+
+    describe('then reinitializing', () => {
+      it('reads the balance from cookies', () => {
+        expect(balanceReducer2(undefined, {})).toEqual(balance);
+      });
     });
   });
 
