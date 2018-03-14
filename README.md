@@ -37,6 +37,6 @@ npm run test -- --coverage
 
 ### Technologies used:
 
-The application is built in React with Redux, and currently uses sfcookies to save the users balance locally.
+The application is built in React with Redux, and currently uses sf-cookies to save the users balance locally.
 
 It is also extensively tested using Jest and enzyme.
