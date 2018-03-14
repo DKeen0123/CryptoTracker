@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchBitcoin } from '../actions/action_bitcoin';
+import { fetchBitcoin, fetchEthereum } from '../actions/action_bitcoin';
 
 export class Coins extends Component {
   componentDidMount() {
     this.props.fetchBitcoin();
+    this.props.fetchEthereum();
   }
 
   calculateBitcoin() {
@@ -23,4 +24,4 @@ export class Coins extends Component {
   }
 }
 
-export default connect(state => state, { fetchBitcoin })(Coins);
+export default connect(state => state, { fetchBitcoin, fetchEthereum })(Coins);

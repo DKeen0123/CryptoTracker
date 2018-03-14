@@ -12,8 +12,10 @@ describe('Coins', () => {
 
   describe('when mounted', () => {
     const mockFetchBitcoin = jest.fn();
+    const mockFetchEthereum = jest.fn();
     beforeEach(() => {
       props.fetchBitcoin = mockFetchBitcoin;
+      props.fetchEthereum = mockFetchEthereum;
       coins = mount(<Coins {...props} />);
     });
 
@@ -21,7 +23,11 @@ describe('Coins', () => {
       expect(mockFetchBitcoin).toHaveBeenCalled();
     });
 
-    describe('when there re valid bitcoin props', () => {
+    it('dispatches the `fetchEthereum()` method received from props', () => {
+      expect(mockFetchEthereum).toHaveBeenCalled();
+    });
+
+    describe('when there are valid bitcoin props', () => {
       beforeEach(() => {
         props = { balance: 10, bitcoin: [{ price_usd: '1000' }] };
         coins = shallow(<Coins {...props} />);
