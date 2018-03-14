@@ -6,10 +6,18 @@ export class Coins extends Component {
   componentDidMount() {
     this.props.fetchBitcoin();
   }
+
+  calculateBitcoin() {
+    const { bitcoin } = this.props;
+    if (Object.keys(bitcoin).length === 0) return '';
+
+    return this.props.balance / parseInt(bitcoin[0].price_usd, 10);
+  }
+
   render() {
     return (
       <div>
-        <h3>Bitcoin: </h3>
+        <h3 className="bitcoin-balance">Bitcoin: {this.calculateBitcoin()}</h3>
       </div>
     );
   }

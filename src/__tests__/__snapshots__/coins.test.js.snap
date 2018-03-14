@@ -20,8 +20,11 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <h3>
+      "children": <h3
+        className="bitcoin-balance"
+>
         Bitcoin: 
+        
 </h3>,
     },
     "ref": null,
@@ -30,10 +33,17 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Bitcoin: ",
+        "children": Array [
+          "Bitcoin: ",
+          "",
+        ],
+        "className": "bitcoin-balance",
       },
       "ref": null,
-      "rendered": "Bitcoin: ",
+      "rendered": Array [
+        "Bitcoin: ",
+        "",
+      ],
       "type": "h3",
     },
     "type": "div",
@@ -44,8 +54,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <h3>
+        "children": <h3
+          className="bitcoin-balance"
+>
           Bitcoin: 
+          
 </h3>,
       },
       "ref": null,
@@ -54,10 +67,17 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Bitcoin: ",
+          "children": Array [
+            "Bitcoin: ",
+            "",
+          ],
+          "className": "bitcoin-balance",
         },
         "ref": null,
-        "rendered": "Bitcoin: ",
+        "rendered": Array [
+          "Bitcoin: ",
+          "",
+        ],
         "type": "h3",
       },
       "type": "div",

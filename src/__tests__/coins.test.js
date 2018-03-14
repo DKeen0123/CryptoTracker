@@ -20,5 +20,16 @@ describe('Coins', () => {
     it('dispatches the `fetchBitcoin()` method received from props', () => {
       expect(mockFetchBitcoin).toHaveBeenCalled();
     });
+
+    describe('when there re valid bitcoin props', () => {
+      beforeEach(() => {
+        props = { balance: 10, bitcoin: [{ price_usd: '1000' }] };
+        coins = shallow(<Coins {...props} />);
+      });
+
+      it('renders the correct bitcoin value to the screen', () => {
+        expect(coins.find('.bitcoin-balance').text()).toEqual('Bitcoin: 0.01');
+      });
+    });
   });
 });
