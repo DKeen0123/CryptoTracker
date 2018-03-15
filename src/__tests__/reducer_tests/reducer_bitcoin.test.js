@@ -1,5 +1,5 @@
-import bitcoinReducer from '../reducers/reducer_bitcoin';
-import { FETCH_BITCOIN } from '../actions/constants';
+import bitcoinReducer from '../../reducers/reducer_bitcoin';
+import { FETCH_BITCOIN } from '../../actions/constants';
 
 describe('bitcoinReducer', () => {
   const bitcoinData = { id: 'bitcoin' };

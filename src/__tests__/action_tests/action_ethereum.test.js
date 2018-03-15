@@ -1,8 +1,8 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
-import { FETCH_ETHEREUM } from '../actions/constants';
-import { fetchEthereum } from '../actions/action_ethereum';
+import { FETCH_ETHEREUM } from '../../actions/constants';
+import { fetchEthereum } from '../../actions/action_ethereum';
 
 const createMockStore = configureMockStore([thunk]);
 const store = createMockStore({ ethereum: {} });

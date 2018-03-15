@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { Coins } from '../components/Coins';
+import { Coins } from '../../components/Coins';
 
 describe('Coins', () => {
   let props = { balance: 10, bitcoin: {} };

@@ -1,5 +1,5 @@
-import ethereumReducer from '../reducers/reducer_ethereum';
-import { FETCH_ETHEREUM } from '../actions/constants';
+import ethereumReducer from '../../reducers/reducer_ethereum';
+import { FETCH_ETHEREUM } from '../../actions/constants';
 
 describe('ethereumReducer', () => {
   const ethereumData = { id: 'ethereum ' };
