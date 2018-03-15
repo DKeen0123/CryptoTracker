@@ -5,7 +5,8 @@ describe('rootReducer', () => {
     expect(rootReducer({}, {})).toEqual({
       balance: 0,
       bitcoin: {},
-      ethereum: {}
+      ethereum: {},
+      crypto: {}
     });
   });
 });
