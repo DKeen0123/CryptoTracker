@@ -16,4 +16,7 @@ describe('App', () => {
   it('renders a connected Coins component', () => {
     expect(app.find('Connect(Coins)').exists()).toBe(true);
   });
+  it('renders a connected CryptoPicker component', () => {
+    expect(app.find('Connect(CryptoPicker)').exists()).toBe(true);
+  });
 });

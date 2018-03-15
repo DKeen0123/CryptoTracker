@@ -3,7 +3,7 @@ import { FETCH_CRYPTO_NAMES } from '../actions/constants';
 const crypto = (state = {}, action) => {
   switch (action.type) {
     case FETCH_CRYPTO_NAMES:
-      return action.crypto;
+      return action.cryptos;
     default:
       return state;
   }

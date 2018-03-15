@@ -6,7 +6,7 @@ describe('cryptoReducer', () => {
 
   it('fetches and sets crypto data', () => {
     expect(
-      cryptoReducer({}, { type: FETCH_CRYPTO_NAMES, crypto: cryptoData })
+      cryptoReducer({}, { type: FETCH_CRYPTO_NAMES, cryptos: cryptoData })
     ).toEqual(cryptoData);
   });
 });

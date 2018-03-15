@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchCryptoNames } from '../actions/action_crypto';
 
-class CryptoPicker extends Component {
+export class CryptoPicker extends Component {
+  componentDidMount() {
+    this.props.fetchCryptoNames();
+  }
+
   render() {
     return (
       <div>
@@ -10,4 +16,9 @@ class CryptoPicker extends Component {
   }
 }
 
-export default CryptoPicker;
+export default connect(
+  state => {
+    return { crypto: state.crypto };
+  },
+  { fetchCryptoNames }
+)(CryptoPicker);
