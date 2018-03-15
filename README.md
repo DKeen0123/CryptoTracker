@@ -6,9 +6,9 @@ A simple portfolio tracker that converts your FIAT balance into your chosen Cryp
 
 ### Current state
 
-The page is rendered with a balance that you can deposit and withdraw to, and the current balance will be live updated and converted into the current value of bitcoin.
+The page is rendered with a balance that you can deposit and withdraw to, and the current balance will be live updated and converted into the current value of bitcoin and Ethereum.
 
-![Alpha version (current)](./public/cryptotracker-alpha.png)
+![Alpha version (current)](./public/cryptotracker_alpha.png)
 
 ### to start it up
 
