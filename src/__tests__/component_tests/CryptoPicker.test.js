@@ -21,4 +21,21 @@ describe('CryptoPicker', () => {
       expect(mockFetchCryptoNames).toHaveBeenCalled();
     });
   });
+
+  describe('when there are valid crypto props', () => {
+    const mockFetchCryptoNames = jest.fn();
+    beforeEach(() => {
+      props = {
+        crypto: [{ id: 'bitcoin' }, { id: 'ethereum' }],
+        fetchCryptoNames: mockFetchCryptoNames
+      };
+      cryptoPicker = mount(<CryptoPicker {...props} />);
+    });
+
+    it('populates a drop down menu with the crypto names', () => {
+      const spy = jest.spyOn(CryptoPicker.prototype, 'populateCryptos');
+      cryptoPicker.instance().populateCryptos();
+      expect(spy).toHaveBeenCalled();
+    });
+  });
 });
