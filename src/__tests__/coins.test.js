@@ -37,5 +37,22 @@ describe('Coins', () => {
         expect(coins.find('.bitcoin-balance').text()).toEqual('Bitcoin: 0.01');
       });
     });
+
+    describe('when there are valid ethereum props', () => {
+      beforeEach(() => {
+        props = {
+          balance: 5,
+          bitcoin: [{ price_usd: '1000' }],
+          ethereum: [{ price_usd: '500' }]
+        };
+        coins = shallow(<Coins {...props} />);
+      });
+
+      it('renders the correct ethereum value to the screen', () => {
+        expect(coins.find('.ethereum-balance').text()).toEqual(
+          'Ethereum: 0.01'
+        );
+      });
+    });
   });
 });
