@@ -1,7 +1,6 @@
 import React from 'react';
 import Wallet from './Wallet';
 import Coins from './Coins';
-import CryptoPicker from './CryptoPicker';
 
 const App = () => {
   return (
