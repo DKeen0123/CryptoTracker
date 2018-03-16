@@ -44,6 +44,7 @@ ShallowWrapper {
 >
           Withdraw
 </button>,
+        <Connect(CryptoPicker) />,
       ],
     },
     "ref": null,
@@ -104,6 +105,15 @@ ShallowWrapper {
         "rendered": "Withdraw",
         "type": "button",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -136,6 +146,7 @@ ShallowWrapper {
 >
             Withdraw
 </button>,
+          <Connect(CryptoPicker) />,
         ],
       },
       "ref": null,
@@ -195,6 +206,15 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Withdraw",
           "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",

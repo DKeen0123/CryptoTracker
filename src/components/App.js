@@ -9,7 +9,6 @@ const App = () => {
       <h2>CryptoTracker</h2>
       <hr />
       <Wallet />
-      <CryptoPicker />
       <Coins />
     </div>
   );

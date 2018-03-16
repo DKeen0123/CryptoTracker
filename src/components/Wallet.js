@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deposit, withdraw } from '../actions/action_balance';
+import CryptoPicker from './CryptoPicker';
 
 export class Wallet extends Component {
   constructor() {
@@ -26,6 +27,7 @@ export class Wallet extends Component {
         <button onClick={this.withdraw} className="withdrawal-btn">
           Withdraw
         </button>
+        <CryptoPicker />
       </div>
     );
   }

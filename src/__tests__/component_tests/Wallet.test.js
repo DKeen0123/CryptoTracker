@@ -20,6 +20,10 @@ describe('Wallet', () => {
     expect(wallet.find('.input-balance').exists()).toBe(true);
   });
 
+  it('renders a connected CryptoPicker component', () => {
+    expect(wallet.find('Connect(CryptoPicker)').exists()).toBe(true);
+  });
+
   describe('when a user types into .input-balance', () => {
     const userBalance = 25;
     beforeEach(() => {
