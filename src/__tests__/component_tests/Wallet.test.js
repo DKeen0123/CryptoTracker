@@ -1,12 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { Wallet } from '../../components/wallet';
-
+import { shallow, mount } from 'enzyme';
+import { Wallet } from '../../components/Wallet';
 describe('Wallet', () => {
   const mockDeposit = jest.fn();
   const mockWithdrawal = jest.fn();
-  const props = { balance: 10, deposit: mockDeposit, withdraw: mockWithdrawal };
-  const wallet = shallow(<Wallet {...props} />);
+  let props = { balance: 10, deposit: mockDeposit, withdraw: mockWithdrawal };
+  let wallet = shallow(<Wallet {...props} />);
 
   it('renders correctly', () => {
     expect(wallet).toMatchSnapshot();
@@ -16,12 +15,21 @@ describe('Wallet', () => {
     expect(wallet.find('.balance').text()).toEqual('Balance: 10');
   });
 
+  describe('when mounted', () => {
+    it('dispatches the `fetchCryptoNames()` method received from props', () => {
+      const mockFetchCryptoNames = jest.fn();
+      props.fetchCryptoNames = mockFetchCryptoNames;
+      wallet = mount(<Wallet {...props} />);
+      expect(mockFetchCryptoNames).toHaveBeenCalled();
+    });
+  });
+
   it('displays a form that the user can type into to update balance', () => {
     expect(wallet.find('.input-balance').exists()).toBe(true);
   });
 
-  it('renders a connected CryptoPicker component', () => {
-    expect(wallet.find('Connect(CryptoPicker)').exists()).toBe(true);
+  it('renders a CryptoPicker component', () => {
+    expect(wallet.find('CryptoPicker').exists()).toBe(true);
   });
 
   describe('when a user types into .input-balance', () => {
