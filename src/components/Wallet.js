@@ -16,7 +16,7 @@ export class Wallet extends Component {
     this.props.fetchCryptoNames();
   }
 
-  updateBalance = event =>
+  handleUpdateBalance = event =>
     this.setState({ balance: parseInt(event.target.value, 10) });
 
   deposit = () => this.props.deposit(this.state.balance);
@@ -27,7 +27,7 @@ export class Wallet extends Component {
       <div>
         <Balance userBalance={this.props.balance} />
         <ChangeBalance />
-        <input className="input-balance" onChange={this.updateBalance} />
+        <input className="input-balance" onChange={this.handleUpdateBalance} />
         <button onClick={this.deposit} className="deposit-btn">
           Deposit
         </button>

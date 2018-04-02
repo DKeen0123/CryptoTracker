@@ -23,6 +23,11 @@ describe('Wallet', () => {
     it('passes props.balance down to Balance component', () => {
       expect(wallet.find('Balance').prop('userBalance')).toEqual(10);
     });
+    it('passes handleUpdateBalance() down to ChangeBalance component', () => {
+      expect(wallet.find('ChangeBalance').prop('changeBalance')).toEqual(
+        wallet.instance().handleUpdateBalance
+      );
+    });
   });
 
   describe('when mounted', () => {
