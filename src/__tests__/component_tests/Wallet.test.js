@@ -29,13 +29,23 @@ describe('Wallet', () => {
       expect(wallet.find('Button').exists()).toBe(true);
     });
 
-    it('passes their name down to them', () => {
-      expect(wallet.find('Button').prop('label')).toEqual('Deposit');
+    it('passes deposit name down to deposit btn', () => {
+      expect(wallet.find('.btn-deposit').prop('label')).toEqual('Deposit');
+    });
+
+    it('passes withdraw name down to withdraw', () => {
+      expect(wallet.find('.btn-withdraw').prop('label')).toEqual('Withdraw');
     });
 
     it('passes the deposit function down to the deposit button', () => {
       expect(wallet.find('.btn-deposit').prop('deposit')).toEqual(
         wallet.instance().deposit
+      );
+    });
+
+    it('passes the withdraw function down to the withdraw button', () => {
+      expect(wallet.find('.btn-withdraw').prop('withdraw')).toEqual(
+        wallet.instance().withdraw
       );
     });
   });
