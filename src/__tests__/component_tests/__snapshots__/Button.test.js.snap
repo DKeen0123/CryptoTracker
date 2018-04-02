@@ -19,10 +19,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Deposit",
+      "children": "Withdraw",
     },
     "ref": null,
-    "rendered": "Deposit",
+    "rendered": "Withdraw",
     "type": "button",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -31,10 +31,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Deposit",
+        "children": "Withdraw",
       },
       "ref": null,
-      "rendered": "Deposit",
+      "rendered": "Withdraw",
       "type": "button",
     },
   ],
