@@ -22,7 +22,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Balance />,
+        <Balance
+          userBalance={10}
+/>,
         <h3
           className="balance"
 >
@@ -56,7 +58,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "userBalance": 10,
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -138,7 +142,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Balance />,
+          <Balance
+            userBalance={10}
+/>,
           <h3
             className="balance"
 >
@@ -172,7 +178,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "userBalance": 10,
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
