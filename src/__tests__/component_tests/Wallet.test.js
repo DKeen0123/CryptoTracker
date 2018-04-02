@@ -24,6 +24,16 @@ describe('Wallet', () => {
     expect(wallet.find('CryptoPicker').exists()).toBe(true);
   });
 
+  describe('Buttons', () => {
+    it('renders a Button component', () => {
+      expect(wallet.find('Button').exists()).toBe(true);
+    });
+
+    it('passes their name down to them', () => {
+      expect(wallet.find('Button').prop('name')).toEqual('Deposit');
+    });
+  });
+
   it('renders a Button component', () => {
     expect(wallet.find('Button').exists()).toBe(true);
   });
