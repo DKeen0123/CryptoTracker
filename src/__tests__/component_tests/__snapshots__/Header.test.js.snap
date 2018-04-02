@@ -17,11 +17,37 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "CryptoTracker",
+      "children": Array [
+        <h1>
+          CryptoTracker
+</h1>,
+        <hr />,
+      ],
     },
     "ref": null,
-    "rendered": "CryptoTracker",
-    "type": "h1",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "CryptoTracker",
+        },
+        "ref": null,
+        "rendered": "CryptoTracker",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -29,11 +55,37 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "CryptoTracker",
+        "children": Array [
+          <h1>
+            CryptoTracker
+</h1>,
+          <hr />,
+        ],
       },
       "ref": null,
-      "rendered": "CryptoTracker",
-      "type": "h1",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "CryptoTracker",
+          },
+          "ref": null,
+          "rendered": "CryptoTracker",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

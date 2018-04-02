@@ -1,7 +1,12 @@
 import React from 'react';
 
 const Header = () => {
-  return <h1>CryptoTracker</h1>;
+  return (
+    <div>
+      <h1>CryptoTracker</h1>
+      <hr />
+    </div>
+  );
 };
 
 export default Header;
