@@ -8,4 +8,8 @@ describe('Wrapper', () => {
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('contains a Header component', () => {
+    expect(wrapper.find('Header').exists()).toBe(true);
+  });
 });
