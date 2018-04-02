@@ -15,6 +15,10 @@ describe('Wallet', () => {
     expect(wallet.find('Balance').exists()).toBe(true);
   });
 
+  it('renders a ChangeBalance component', () => {
+    expect(wallet.find('ChangeBalance').exists()).toBe(true);
+  });
+
   describe('passing Props', () => {
     it('passes props.balance down to Balance component', () => {
       expect(wallet.find('Balance').prop('userBalance')).toEqual(10);
