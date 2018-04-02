@@ -30,7 +30,7 @@ describe('Wallet', () => {
     });
 
     it('passes their name down to them', () => {
-      expect(wallet.find('Button').prop('name')).toEqual('Deposit');
+      expect(wallet.find('Button').prop('label')).toEqual('Deposit');
     });
   });
 
