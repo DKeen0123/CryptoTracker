@@ -50,6 +50,22 @@ describe('Wallet', () => {
     });
   });
 
+  describe('deposit()', () => {
+    it('fires the deposit action recieved from props and gives it the balance state', () => {
+      wallet.setState({ balance: 10 });
+      wallet.instance().deposit();
+      expect(mockDeposit).toHaveBeenCalled();
+    });
+  });
+
+  describe('withdraw()', () => {
+    it('fires the withdraw action recieved from props and gives it the balance state', () => {
+      wallet.setState({ balance: 10 });
+      wallet.instance().withdraw();
+      expect(mockWithdrawal).toHaveBeenCalled();
+    });
+  });
+
   describe('passing Props', () => {
     it('passes props.balance down to Balance component', () => {
       expect(wallet.find('Balance').prop('userBalance')).toEqual(10);
