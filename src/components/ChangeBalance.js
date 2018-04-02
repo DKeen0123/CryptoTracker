@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ChangeBalance = () => {
+const ChangeBalance = props => {
   return (
     <div>
-      <input />
+      <input className="input-balance" onChange={props.changeBalance} />
     </div>
   );
 };
