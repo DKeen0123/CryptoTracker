@@ -15,6 +15,10 @@ describe('Wallet', () => {
     expect(wallet.find('.balance').text()).toEqual('Balance: 10');
   });
 
+  it('renders a Balance component', () => {
+    expect(wallet.find('Balance').exists()).toBe(true);
+  });
+
   describe('when mounted', () => {
     it('dispatches the `fetchCryptoNames()` method received from props', () => {
       const mockFetchCryptoNames = jest.fn();
