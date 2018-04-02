@@ -34,7 +34,9 @@ describe('Wallet', () => {
     });
 
     it('passes the deposit function down to the deposit button', () => {
-      expect(wallet.find('.btn-deposit').prop('deposit')).toEqual(mockDeposit);
+      expect(wallet.find('.btn-deposit').prop('deposit')).toEqual(
+        wallet.instance().deposit
+      );
     });
   });
 

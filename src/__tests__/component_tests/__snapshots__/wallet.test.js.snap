@@ -29,6 +29,8 @@ ShallowWrapper {
           changeBalance={[Function]}
 />,
         <Button
+          className="btn-deposit"
+          deposit={[Function]}
           label="Deposit"
 />,
         <button
@@ -77,6 +79,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "className": "btn-deposit",
+          "deposit": [Function],
           "label": "Deposit",
         },
         "ref": null,
@@ -137,6 +141,8 @@ ShallowWrapper {
             changeBalance={[Function]}
 />,
           <Button
+            className="btn-deposit"
+            deposit={[Function]}
             label="Deposit"
 />,
           <button
@@ -185,6 +191,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "className": "btn-deposit",
+            "deposit": [Function],
             "label": "Deposit",
           },
           "ref": null,
