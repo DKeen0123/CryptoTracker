@@ -47,7 +47,7 @@ describe('Wallet', () => {
     it('sets the `currentInput` state to the amount entered into the input', () => {
       const event = { target: { value: 10 } };
       wallet.instance().handleUpdateBalance(event);
-      expect(wallet.state('currentInput')).toEqual(10);
+      expect(wallet.state('balance')).toEqual(10);
     });
   });
 
