@@ -24,6 +24,10 @@ describe('Wallet', () => {
     expect(wallet.find('CryptoPicker').exists()).toBe(true);
   });
 
+  it('renders a Button component', () => {
+    expect(wallet.find('Button').exists()).toBe(true);
+  });
+
   describe('passing Props', () => {
     it('passes props.balance down to Balance component', () => {
       expect(wallet.find('Balance').prop('userBalance')).toEqual(10);
