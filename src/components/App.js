@@ -1,14 +1,10 @@
 import React from 'react';
-import Wallet from './Wallet';
-import Coins from './Coins';
+import Wrapper from '../containers/Wrapper';
 
 const App = () => {
   return (
     <div>
-      <h2>CryptoTracker</h2>
-      <hr />
-      <Wallet />
-      <Coins />
+      <Wrapper />
     </div>
   );
 };
