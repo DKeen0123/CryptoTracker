@@ -19,6 +19,10 @@ describe('Wallet', () => {
     expect(wallet.find('ChangeBalance').exists()).toBe(true);
   });
 
+  it('renders a CryptoPicker component', () => {
+    expect(wallet.find('CryptoPicker').exists()).toBe(true);
+  });
+
   describe('passing Props', () => {
     it('passes props.balance down to Balance component', () => {
       expect(wallet.find('Balance').prop('userBalance')).toEqual(10);
@@ -39,12 +43,12 @@ describe('Wallet', () => {
     });
   });
 
-  it('displays a form that the user can type into to update balance', () => {
-    expect(wallet.find('.input-balance').exists()).toBe(true);
-  });
-
-  it('renders a CryptoPicker component', () => {
-    expect(wallet.find('CryptoPicker').exists()).toBe(true);
+  describe('handleUpdateBalance()', () => {
+    it('sets the `currentInput` state to the amount entered into the input', () => {
+      const event = { target: { value: 10 } };
+      wallet.instance().handleUpdateBalance(event);
+      expect(wallet.state('currentInput')).toEqual(10);
+    });
   });
 
   describe('when a user types into .input-balance', () => {
@@ -54,10 +58,10 @@ describe('Wallet', () => {
         .find('.input-balance')
         .simulate('change', { target: { value: userBalance } });
     });
-
-    it('updates the local `state` balance and converts to a number', () => {
-      expect(wallet.state().balance).toEqual(parseInt(userBalance, 10));
-    });
+    //
+    // it('updates the local `state` balance and converts to a number', () => {
+    //   expect(wallet.state().balance).toEqual(parseInt(userBalance, 10));
+    // });
 
     describe('and the user wants to deposit into the balance', () => {
       beforeEach(() => {
