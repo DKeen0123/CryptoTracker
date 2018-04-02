@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Balance = () => {
+const Balance = props => {
   return (
     <div>
-      <h4>Your balance: </h4>
+      <h3>Balance: {props.userBalance}</h3>
     </div>
   );
 };
