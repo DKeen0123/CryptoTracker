@@ -11,10 +11,6 @@ describe('Wallet', () => {
     expect(wallet).toMatchSnapshot();
   });
 
-  it('gets the balance from props', () => {
-    expect(wallet.find('.balance').text()).toEqual('Balance: 10');
-  });
-
   it('renders a Balance component', () => {
     expect(wallet.find('Balance').exists()).toBe(true);
   });

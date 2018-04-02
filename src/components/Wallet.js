@@ -25,7 +25,6 @@ export class Wallet extends Component {
     return (
       <div>
         <Balance userBalance={this.props.balance} />
-        <h3 className="balance">Balance: {this.props.balance}</h3>
         <input className="input-balance" onChange={this.updateBalance} />
         <button onClick={this.deposit} className="deposit-btn">
           Deposit

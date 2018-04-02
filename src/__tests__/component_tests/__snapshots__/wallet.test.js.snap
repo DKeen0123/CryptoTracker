@@ -25,12 +25,6 @@ ShallowWrapper {
         <Balance
           userBalance={10}
 />,
-        <h3
-          className="balance"
->
-          Balance: 
-          10
-</h3>,
         <input
           className="input-balance"
           onChange={[Function]}
@@ -64,24 +58,6 @@ ShallowWrapper {
         "ref": null,
         "rendered": null,
         "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Balance: ",
-            10,
-          ],
-          "className": "balance",
-        },
-        "ref": null,
-        "rendered": Array [
-          "Balance: ",
-          10,
-        ],
-        "type": "h3",
       },
       Object {
         "instance": null,
@@ -145,12 +121,6 @@ ShallowWrapper {
           <Balance
             userBalance={10}
 />,
-          <h3
-            className="balance"
->
-            Balance: 
-            10
-</h3>,
           <input
             className="input-balance"
             onChange={[Function]}
@@ -184,24 +154,6 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Balance: ",
-              10,
-            ],
-            "className": "balance",
-          },
-          "ref": null,
-          "rendered": Array [
-            "Balance: ",
-            10,
-          ],
-          "type": "h3",
         },
         Object {
           "instance": null,
