@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { deposit, withdraw } from '../actions/action_balance';
 import CryptoPicker from './CryptoPicker';
 import Balance from './Balance';
+import Button from './Button';
 import ChangeBalance from './ChangeBalance';
 import { fetchCryptoNames } from '../actions/action_crypto';
 
@@ -27,6 +28,7 @@ export class Wallet extends Component {
       <div>
         <Balance userBalance={this.props.balance} />
         <ChangeBalance changeBalance={this.handleUpdateBalance} />
+        <Button />
         <button onClick={this.deposit} className="deposit-btn">
           Deposit
         </button>
