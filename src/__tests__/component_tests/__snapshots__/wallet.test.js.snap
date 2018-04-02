@@ -25,6 +25,7 @@ ShallowWrapper {
         <Balance
           userBalance={10}
 />,
+        <ChangeBalance />,
         <input
           className="input-balance"
           onChange={[Function]}
@@ -55,6 +56,15 @@ ShallowWrapper {
         "props": Object {
           "userBalance": 10,
         },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -121,6 +131,7 @@ ShallowWrapper {
           <Balance
             userBalance={10}
 />,
+          <ChangeBalance />,
           <input
             className="input-balance"
             onChange={[Function]}
@@ -151,6 +162,15 @@ ShallowWrapper {
           "props": Object {
             "userBalance": 10,
           },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],
