@@ -4,14 +4,13 @@
   "private": true,
   "dependencies": {
     "enzyme-adapter-react-16": "^1.1.1",
-    "npm": "^5.7.1",
+    "npm": "^5.8.0",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",
     "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.2.0",
-    "sfcookies": "^1.0.2",
-    "sinon": "^4.4.6"
+    "sfcookies": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
