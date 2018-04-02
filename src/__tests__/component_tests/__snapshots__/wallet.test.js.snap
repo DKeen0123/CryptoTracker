@@ -33,18 +33,11 @@ ShallowWrapper {
           deposit={[Function]}
           label="Deposit"
 />,
-        <button
-          className="deposit-btn"
-          onClick={[Function]}
->
-          Deposit
-</button>,
-        <button
-          className="withdrawal-btn"
-          onClick={[Function]}
->
-          Withdraw
-</button>,
+        <Button
+          className="btn-withdraw"
+          label="Withdraw"
+          withdraw={[Function]}
+/>,
         <CryptoPicker
           cryptos={undefined}
 />,
@@ -90,28 +83,15 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
-          "children": "Deposit",
-          "className": "deposit-btn",
-          "onClick": [Function],
+          "className": "btn-withdraw",
+          "label": "Withdraw",
+          "withdraw": [Function],
         },
         "ref": null,
-        "rendered": "Deposit",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Withdraw",
-          "className": "withdrawal-btn",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Withdraw",
-        "type": "button",
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -145,18 +125,11 @@ ShallowWrapper {
             deposit={[Function]}
             label="Deposit"
 />,
-          <button
-            className="deposit-btn"
-            onClick={[Function]}
->
-            Deposit
-</button>,
-          <button
-            className="withdrawal-btn"
-            onClick={[Function]}
->
-            Withdraw
-</button>,
+          <Button
+            className="btn-withdraw"
+            label="Withdraw"
+            withdraw={[Function]}
+/>,
           <CryptoPicker
             cryptos={undefined}
 />,
@@ -202,28 +175,15 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
-            "children": "Deposit",
-            "className": "deposit-btn",
-            "onClick": [Function],
+            "className": "btn-withdraw",
+            "label": "Withdraw",
+            "withdraw": [Function],
           },
           "ref": null,
-          "rendered": "Deposit",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Withdraw",
-            "className": "withdrawal-btn",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Withdraw",
-          "type": "button",
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,

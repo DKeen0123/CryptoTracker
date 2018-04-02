@@ -33,12 +33,11 @@ export class Wallet extends Component {
           className="btn-deposit"
           deposit={this.deposit}
         />
-        <button onClick={this.deposit} className="deposit-btn">
-          Deposit
-        </button>
-        <button onClick={this.withdraw} className="withdrawal-btn">
-          Withdraw
-        </button>
+        <Button
+          label="Withdraw"
+          className="btn-withdraw"
+          withdraw={this.withdraw}
+        />
         <CryptoPicker cryptos={this.props.cryptos} />
       </div>
     );
