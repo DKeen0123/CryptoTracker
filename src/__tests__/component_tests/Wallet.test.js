@@ -32,10 +32,10 @@ describe('Wallet', () => {
     it('passes their name down to them', () => {
       expect(wallet.find('Button').prop('label')).toEqual('Deposit');
     });
-  });
 
-  it('renders a Button component', () => {
-    expect(wallet.find('Button').exists()).toBe(true);
+    it('passes the deposit function down to the deposit button', () => {
+      expect(wallet.find('.btn-deposit').prop('deposit')).toEqual(mockDeposit);
+    });
   });
 
   describe('passing Props', () => {
