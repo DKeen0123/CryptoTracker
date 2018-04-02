@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Wrapper from '../../components/Wrapper';
+import Wrapper from '../../containers/Wrapper';
 
 describe('Wrapper', () => {
   let wrapper = shallow(<Wrapper />);
