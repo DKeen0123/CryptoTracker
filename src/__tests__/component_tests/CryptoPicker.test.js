@@ -4,7 +4,7 @@ import CryptoPicker from '../../components/CryptoPicker';
 
 describe('CryptoPicker', () => {
   let props = {};
-  let cryptoPicker = shallow(<CryptoPicker />);
+  let cryptoPicker = shallow(<CryptoPicker {...props} />);
 
   it('renders correctly', () => {
     expect(cryptoPicker).toMatchSnapshot();
@@ -25,5 +25,17 @@ describe('CryptoPicker', () => {
       cryptoPicker = mount(<CryptoPicker {...props} />);
       expect(spy).toHaveBeenCalled();
     });
+
+    describe('onChange of the dropdown selected crypto', () => {
+      it('fires the selectCrypto function prop', () => {
+        const mockSelectCrypto = jest.fn();
+        props = {selectCrypto: mockSelectCrypto};
+        cryptoPicker = shallow(<CryptoPicker {...props} />);
+        cryptoPicker.find('select').simulate('change');
+        expect(mockSelectCrypto).toHaveBeenCalled();
+        });
+      });
   });
+
+
 });

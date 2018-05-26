@@ -53,7 +53,7 @@ describe('Wallet', () => {
 
   describe('selectCrypto()', () => {
     it('updates the `chosenCrypto` state with the currently selected cryptocurrency', () => {
-      wallet.instance().selectCrypto({ target: { id: 'ethereum' } });
+      wallet.instance().selectCrypto({ target: { value: 'ethereum' } });
       expect(wallet.state('chosenCrypto')).toEqual('ethereum');
     })
   });
@@ -105,6 +105,13 @@ describe('Wallet', () => {
     it('passes selectCrypto() down to cryptoPicker component', () => {
       expect(wallet.find('CryptoPicker').prop('selectCrypto')).toEqual(
         wallet.instance().selectCrypto
+      )
+    });
+
+    it('passes `chosenCrypto` down to cryptoPicker component', () => {
+      wallet.setState({ chosenCrypto: 'ethereum' })
+      expect(wallet.find('CryptoPicker').prop('chosenCrypto')).toEqual(
+        wallet.state('chosenCrypto')
       )
     });
   });

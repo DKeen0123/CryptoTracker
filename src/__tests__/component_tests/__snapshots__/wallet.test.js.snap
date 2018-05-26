@@ -40,6 +40,7 @@ ShallowWrapper {
           transaction={[Function]}
 />,
         <CryptoPicker
+          chosenCrypto={undefined}
           cryptos={undefined}
           selectCrypto={[Function]}
 />,
@@ -100,6 +101,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "chosenCrypto": undefined,
           "cryptos": undefined,
           "selectCrypto": [Function],
         },
@@ -134,6 +136,7 @@ ShallowWrapper {
             transaction={[Function]}
 />,
           <CryptoPicker
+            chosenCrypto={undefined}
             cryptos={undefined}
             selectCrypto={[Function]}
 />,
@@ -194,6 +197,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "chosenCrypto": undefined,
             "cryptos": undefined,
             "selectCrypto": [Function],
           },

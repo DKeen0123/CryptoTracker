@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
-export default class CryptoPicker extends Component {
+class CryptoPicker extends Component {
+  constructor(props) {
+    super()
+  }
   populateCryptos() {
     const { cryptos } = this.props;
     if (cryptos === null || cryptos === undefined) return '';
@@ -18,8 +21,17 @@ export default class CryptoPicker extends Component {
     return (
       <div>
         <h3>Choose your crypto: </h3>
-        <select className="drop-down">{this.populateCryptos()}</select>
+        <select
+          onChange={this.props.selectCrypto}
+          className="drop-down"
+          value={this.props.chosenCrypto}
+        >
+          {this.populateCryptos()}
+        </select>
+
       </div>
     );
   }
 }
+
+export default CryptoPicker;

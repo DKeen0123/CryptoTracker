@@ -23,6 +23,8 @@ ShallowWrapper {
 </h3>,
         <select
           className="drop-down"
+          onChange={undefined}
+          value={undefined}
 />,
       ],
     },
@@ -46,6 +48,8 @@ ShallowWrapper {
         "props": Object {
           "children": "",
           "className": "drop-down",
+          "onChange": undefined,
+          "value": undefined,
         },
         "ref": null,
         "rendered": "",
@@ -66,6 +70,8 @@ ShallowWrapper {
 </h3>,
           <select
             className="drop-down"
+            onChange={undefined}
+            value={undefined}
 />,
         ],
       },
@@ -89,6 +95,8 @@ ShallowWrapper {
           "props": Object {
             "children": "",
             "className": "drop-down",
+            "onChange": undefined,
+            "value": undefined,
           },
           "ref": null,
           "rendered": "",

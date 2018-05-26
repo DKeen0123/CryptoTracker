@@ -26,8 +26,11 @@ export class Wallet extends Component {
   transaction = transactionType =>
     transactionType === 'Deposit'? this.deposit() : this.withdraw();
 
-  selectCrypto = event =>
-    this.setState({ chosenCrypto: event.target.id })
+  selectCrypto = event => {
+    this.setState({
+      chosenCrypto: event.target.value
+    });
+  }
 
 
   render() {
@@ -48,6 +51,7 @@ export class Wallet extends Component {
         <CryptoPicker
           cryptos={this.props.cryptos}
           selectCrypto={this.selectCrypto}
+          chosenCrypto={this.state.chosenCrypto}
         />
       </div>
     );
