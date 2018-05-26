@@ -37,15 +37,15 @@ describe('Wallet', () => {
       expect(wallet.find('.btn-withdraw').prop('label')).toEqual('Withdraw');
     });
 
-    it('passes the deposit function down to the deposit button', () => {
-      expect(wallet.find('.btn-deposit').prop('deposit')).toEqual(
-        wallet.instance().deposit
+    it('passes the transaction function down to the deposit button', () => {
+      expect(wallet.find('.btn-deposit').prop('transaction')).toEqual(
+        wallet.instance().transaction
       );
     });
 
-    it('passes the withdraw function down to the withdraw button', () => {
-      expect(wallet.find('.btn-withdraw').prop('withdraw')).toEqual(
-        wallet.instance().withdraw
+    it('passes the transaction function down to the withdraw button', () => {
+      expect(wallet.find('.btn-withdraw').prop('transaction')).toEqual(
+        wallet.instance().transaction
       );
     });
   });

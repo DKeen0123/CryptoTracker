@@ -30,13 +30,13 @@ ShallowWrapper {
 />,
         <Button
           className="btn-deposit"
-          deposit={[Function]}
           label="Deposit"
+          transaction={[Function]}
 />,
         <Button
           className="btn-withdraw"
           label="Withdraw"
-          withdraw={[Function]}
+          transaction={[Function]}
 />,
         <CryptoPicker
           cryptos={undefined}
@@ -73,8 +73,8 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "className": "btn-deposit",
-          "deposit": [Function],
           "label": "Deposit",
+          "transaction": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -87,7 +87,7 @@ ShallowWrapper {
         "props": Object {
           "className": "btn-withdraw",
           "label": "Withdraw",
-          "withdraw": [Function],
+          "transaction": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -122,13 +122,13 @@ ShallowWrapper {
 />,
           <Button
             className="btn-deposit"
-            deposit={[Function]}
             label="Deposit"
+            transaction={[Function]}
 />,
           <Button
             className="btn-withdraw"
             label="Withdraw"
-            withdraw={[Function]}
+            transaction={[Function]}
 />,
           <CryptoPicker
             cryptos={undefined}
@@ -165,8 +165,8 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "className": "btn-deposit",
-            "deposit": [Function],
             "label": "Deposit",
+            "transaction": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -179,7 +179,7 @@ ShallowWrapper {
           "props": Object {
             "className": "btn-withdraw",
             "label": "Withdraw",
-            "withdraw": [Function],
+            "transaction": [Function],
           },
           "ref": null,
           "rendered": null,

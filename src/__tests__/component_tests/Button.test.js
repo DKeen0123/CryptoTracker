@@ -3,7 +3,8 @@ import { shallow } from 'enzyme';
 import Button from '../../components/Button';
 
 describe('Button', () => {
-  let props = { label: 'Withdraw' };
+  const mockTransaction = jest.fn();
+  let props = { label: 'Withdraw', transaction: mockTransaction };
   let button = shallow(<Button {...props} />);
 
   it('renders correctly', () => {
@@ -13,4 +14,9 @@ describe('Button', () => {
   it('displays its label prop as its text', () => {
     expect(button.text()).toBe('Withdraw');
   });
+
+  it('fires the transaction() function when clicked', () => {
+    button.simulate('click');
+    expect(mockTransaction).toHaveBeenCalled();
+  })
 });

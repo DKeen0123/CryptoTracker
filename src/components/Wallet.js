@@ -23,6 +23,10 @@ export class Wallet extends Component {
   deposit = () => this.props.deposit(this.state.balance);
   withdraw = () => this.props.withdraw(this.state.balance);
 
+  transaction = transactionType =>
+    transactionType === 'Deposit'? this.deposit() : this.withdraw();
+
+
   render() {
     return (
       <div>
@@ -31,12 +35,12 @@ export class Wallet extends Component {
         <Button
           label="Deposit"
           className="btn-deposit"
-          deposit={this.deposit}
+          transaction={this.transaction}
         />
         <Button
           label="Withdraw"
           className="btn-withdraw"
-          withdraw={this.withdraw}
+          transaction={this.transaction}
         />
         <CryptoPicker cryptos={this.props.cryptos} />
       </div>
