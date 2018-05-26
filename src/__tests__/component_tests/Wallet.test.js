@@ -51,6 +51,13 @@ describe('Wallet', () => {
     });
   });
 
+  describe('selectCrypto()', () => {
+    it('updates the `chosenCrypto` state with the currently selected cryptocurrency', () => {
+      wallet.instance().selectCrypto({ target: { id: 'ethereum' } });
+      expect(wallet.state('chosenCrypto')).toEqual('ethereum');
+    })
+  });
+
   describe('deposit()', () => {
      let wallet = shallow(<Wallet {...props} />);
     it('fires the deposit action recieved from props and gives it the balance state', () => {

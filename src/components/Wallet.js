@@ -10,7 +10,7 @@ import { fetchCryptoNames } from '../actions/action_crypto';
 export class Wallet extends Component {
   constructor() {
     super();
-    this.state = { balance: undefined };
+    this.state = { balance: undefined, chosenCrypto: undefined };
   }
 
   componentDidMount() {
@@ -25,6 +25,9 @@ export class Wallet extends Component {
 
   transaction = transactionType =>
     transactionType === 'Deposit'? this.deposit() : this.withdraw();
+
+  selectCrypto = event =>
+    this.setState({ chosenCrypto: event.target.id })
 
 
   render() {
