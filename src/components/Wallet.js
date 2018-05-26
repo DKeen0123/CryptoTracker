@@ -45,7 +45,10 @@ export class Wallet extends Component {
           className="btn-withdraw"
           transaction={this.transaction}
         />
-        <CryptoPicker cryptos={this.props.cryptos} />
+        <CryptoPicker
+          cryptos={this.props.cryptos}
+          selectCrypto={this.selectCrypto}
+        />
       </div>
     );
   }
