@@ -5,7 +5,8 @@ import { Wallet } from '../../components/Wallet';
 describe('Wallet', () => {
   const mockDeposit = jest.fn();
   const mockWithdrawal = jest.fn();
-  let props = { balance: 10, deposit: mockDeposit, withdraw: mockWithdrawal };
+  const mockFetchCryptoNames = jest.fn()
+  let props = { balance: 10, deposit: mockDeposit, withdraw: mockWithdrawal, fetchCryptoNames: mockFetchCryptoNames };
   let wallet = shallow(<Wallet {...props} />);
 
   it('renders correctly', () => {
@@ -51,6 +52,7 @@ describe('Wallet', () => {
   });
 
   describe('deposit()', () => {
+     let wallet = shallow(<Wallet {...props} />);
     it('fires the deposit action recieved from props and gives it the balance state', () => {
       wallet.setState({ balance: 10 });
       wallet.instance().deposit();
@@ -66,7 +68,23 @@ describe('Wallet', () => {
     });
   });
 
+  describe('transaction()', () => {
+    let wallet = mount(<Wallet {...props} />);
+    it('fires the deposit function when passed the string deposit', () => {
+      jest.spyOn(wallet.instance(), 'deposit')
+      wallet.instance().transaction('Deposit');
+      expect(wallet.instance().deposit).toHaveBeenCalled()
+    })
+
+    it('fires the deposit function when passed the string deposit', () => {
+      jest.spyOn(wallet.instance(), 'withdraw')
+      wallet.instance().transaction('Withdraw');
+      expect(wallet.instance().withdraw).toHaveBeenCalled()
+    })
+  });
+
   describe('passing Props', () => {
+    let wallet = shallow(<Wallet {...props} />);
     it('passes props.balance down to Balance component', () => {
       expect(wallet.find('Balance').prop('userBalance')).toEqual(10);
     });
