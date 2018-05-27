@@ -12,10 +12,12 @@ describe('CryptoPicker', () => {
 
   describe('when there are valid crypto props', () => {
     const mockFetchCryptoNames = jest.fn();
+    const mockAddCrypto = jest.fn();
     beforeEach(() => {
       props = {
         crypto: [{ id: 'bitcoin' }, { id: 'ethereum' }],
-        fetchCryptoNames: mockFetchCryptoNames
+        fetchCryptoNames: mockFetchCryptoNames,
+        addCrypto: mockAddCrypto
       };
       cryptoPicker = mount(<CryptoPicker {...props} />);
     });
@@ -33,8 +35,14 @@ describe('CryptoPicker', () => {
         cryptoPicker = shallow(<CryptoPicker {...props} />);
         cryptoPicker.find('select').simulate('change');
         expect(mockSelectCrypto).toHaveBeenCalled();
-        });
       });
+    });
+
+    describe('onClick of the add button', () => {
+      it('fires the addCrypto method passed from props', () => {
+
+      })
+    })
   });
 
 

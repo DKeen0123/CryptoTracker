@@ -5,7 +5,7 @@ const selectedCrypto = (state = null, action) => {
     case FETCH_SELECTED_CRYPTO:
       return action.selectedCrypto;
     default:
-      return state
+      return state;
   }
 }
 

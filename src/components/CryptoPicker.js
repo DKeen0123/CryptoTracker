@@ -29,7 +29,10 @@ class CryptoPicker extends Component {
         >
           {this.populateCryptos()}
         </select>
-        <AddButton label="Add" />
+        <AddButton
+          label="Add"
+          onClick={this.props.addCrypto}
+        />
       </div>
     );
   }

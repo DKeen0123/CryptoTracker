@@ -28,6 +28,7 @@ ShallowWrapper {
 />,
         <AddButton
           label="Add"
+          onClick={undefined}
 />,
       ],
     },
@@ -64,6 +65,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "label": "Add",
+          "onClick": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -89,6 +91,7 @@ ShallowWrapper {
 />,
           <AddButton
             label="Add"
+            onClick={undefined}
 />,
         ],
       },
@@ -125,6 +128,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "label": "Add",
+            "onClick": undefined,
           },
           "ref": null,
           "rendered": null,
