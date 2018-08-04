@@ -6,7 +6,7 @@ describe('selectedCryptoReducer', () => {
 
   it('fetches and sets the selected crypto', () => {
     expect(
-      selectedCryptoReducer(null, { type: FETCH_SELECTED_CRYPTO, selectedCrypto })
-    ).toEqual(selectedCrypto);
+      selectedCryptoReducer([], { type: FETCH_SELECTED_CRYPTO, selectedCrypto })
+    ).toEqual([selectedCrypto]);
   });
 });

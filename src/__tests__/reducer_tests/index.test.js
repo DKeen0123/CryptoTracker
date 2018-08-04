@@ -7,7 +7,7 @@ describe('rootReducer', () => {
       bitcoin: {},
       ethereum: {},
       crypto: {},
-      selectedCrypto: null
+      selectedCryptos: []
     });
   });
 });

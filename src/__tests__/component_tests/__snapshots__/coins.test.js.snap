@@ -7,6 +7,12 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Coins
     balance={10}
     bitcoin={Object {}}
+    selectedCryptos={
+        Array [
+            "XRP",
+            "TRON",
+          ]
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -33,6 +39,20 @@ ShallowWrapper {
           Ethereum: 
           
 </h3>,
+        Array [
+          <h3
+            id="XRP"
+>
+            XRP
+            :
+</h3>,
+          <h3
+            id="TRON"
+>
+            TRON
+            :
+</h3>,
+        ],
       ],
     },
     "ref": null,
@@ -73,6 +93,42 @@ ShallowWrapper {
         ],
         "type": "h3",
       },
+      Object {
+        "instance": null,
+        "key": "XRP",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "XRP",
+            ":",
+          ],
+          "id": "XRP",
+        },
+        "ref": null,
+        "rendered": Array [
+          "XRP",
+          ":",
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": "TRON",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "TRON",
+            ":",
+          ],
+          "id": "TRON",
+        },
+        "ref": null,
+        "rendered": Array [
+          "TRON",
+          ":",
+        ],
+        "type": "h3",
+      },
     ],
     "type": "div",
   },
@@ -95,6 +151,20 @@ ShallowWrapper {
             Ethereum: 
             
 </h3>,
+          Array [
+            <h3
+              id="XRP"
+>
+              XRP
+              :
+</h3>,
+            <h3
+              id="TRON"
+>
+              TRON
+              :
+</h3>,
+          ],
         ],
       },
       "ref": null,
@@ -132,6 +202,42 @@ ShallowWrapper {
           "rendered": Array [
             "Ethereum: ",
             "",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": "XRP",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "XRP",
+              ":",
+            ],
+            "id": "XRP",
+          },
+          "ref": null,
+          "rendered": Array [
+            "XRP",
+            ":",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": "TRON",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "TRON",
+              ":",
+            ],
+            "id": "TRON",
+          },
+          "ref": null,
+          "rendered": Array [
+            "TRON",
+            ":",
           ],
           "type": "h3",
         },
