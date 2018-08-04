@@ -31,7 +31,7 @@ class CryptoPicker extends Component {
         </select>
         <AddButton
           label="Add"
-          onClick={this.props.addCrypto}
+          addCrypto={this.props.addCrypto}
         />
       </div>
     );

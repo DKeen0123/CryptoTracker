@@ -38,9 +38,11 @@ describe('CryptoPicker', () => {
       });
     });
 
-    describe('onClick of the add button', () => {
-      it('fires the addCrypto method passed from props', () => {
-
+    describe('passing props', () => {
+      it('passes the addCrypto method down from props', () => {
+        expect(cryptoPicker.find('AddButton').prop('addCrypto')).toEqual(
+          cryptoPicker.prop('addCrypto')
+        )
       })
     })
   });

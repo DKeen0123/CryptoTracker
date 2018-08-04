@@ -11,7 +11,7 @@ import selectedCrypto from '../actions/action_selected_crypto';
 export class Wallet extends Component {
   constructor() {
     super();
-    this.state = { balance: undefined, chosenCrypto: undefined };
+    this.state = { balance: undefined, chosenCrypto: 'Bitcoin' };
   }
 
   componentDidMount() {

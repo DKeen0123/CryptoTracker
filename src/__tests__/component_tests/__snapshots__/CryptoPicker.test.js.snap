@@ -27,8 +27,8 @@ ShallowWrapper {
           value={undefined}
 />,
         <AddButton
+          addCrypto={undefined}
           label="Add"
-          onClick={undefined}
 />,
       ],
     },
@@ -64,8 +64,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "addCrypto": undefined,
           "label": "Add",
-          "onClick": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -90,8 +90,8 @@ ShallowWrapper {
             value={undefined}
 />,
           <AddButton
+            addCrypto={undefined}
             label="Add"
-            onClick={undefined}
 />,
         ],
       },
@@ -127,8 +127,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "addCrypto": undefined,
             "label": "Add",
-            "onClick": undefined,
           },
           "ref": null,
           "rendered": null,
