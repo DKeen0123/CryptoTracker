@@ -26,6 +26,10 @@ ShallowWrapper {
           onChange={undefined}
           value={undefined}
 />,
+        <AddButton
+          addCrypto={undefined}
+          label="Add"
+/>,
       ],
     },
     "ref": null,
@@ -55,6 +59,18 @@ ShallowWrapper {
         "rendered": "",
         "type": "select",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "addCrypto": undefined,
+          "label": "Add",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -72,6 +88,10 @@ ShallowWrapper {
             className="drop-down"
             onChange={undefined}
             value={undefined}
+/>,
+          <AddButton
+            addCrypto={undefined}
+            label="Add"
 />,
         ],
       },
@@ -101,6 +121,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": "",
           "type": "select",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "addCrypto": undefined,
+            "label": "Add",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",

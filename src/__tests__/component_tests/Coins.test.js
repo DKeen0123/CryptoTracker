@@ -3,12 +3,19 @@ import { shallow, mount } from 'enzyme';
 import { Coins } from '../../components/Coins';
 
 describe('Coins', () => {
-  let props = { balance: 10, bitcoin: {} };
+  let props = { balance: 10, bitcoin: {}, selectedCryptos: ["XRP", "TRON"] };
   let coins = shallow(<Coins {...props} />);
 
   it('renders correctly', () => {
     expect(coins).toMatchSnapshot();
   });
+
+  describe('renderCryptos', () => {
+    it('maps over each and renders them as elements', () => {
+      expect(coins.find('#XRP').exists()).toEqual(true)
+      expect(coins.find('#TRON').exists()).toEqual(true)
+    })
+  })
 
   describe('when mounted', () => {
     const mockFetchBitcoin = jest.fn();
@@ -29,7 +36,7 @@ describe('Coins', () => {
 
     describe('when there are valid bitcoin props', () => {
       beforeEach(() => {
-        props = { balance: 10, bitcoin: [{ price_usd: '1000' }] };
+        props = { balance: 10, bitcoin: [{ price_usd: '1000' }], selectedCryptos: ["XRP", "TRON"] };
         coins = shallow(<Coins {...props} />);
       });
 
@@ -43,7 +50,9 @@ describe('Coins', () => {
         props = {
           balance: 5,
           bitcoin: [{ price_usd: '1000' }],
-          ethereum: [{ price_usd: '500' }]
+          ethereum: [{
+            price_usd: '500'
+          }], selectedCryptos: ["XRP", "TRON"]
         };
         coins = shallow(<Coins {...props} />);
       });

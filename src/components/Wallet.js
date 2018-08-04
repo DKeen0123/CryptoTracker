@@ -6,11 +6,12 @@ import Balance from './Balance';
 import Button from './Button';
 import ChangeBalance from './ChangeBalance';
 import { fetchCryptoNames } from '../actions/action_crypto';
+import selectedCrypto from '../actions/action_selected_crypto';
 
 export class Wallet extends Component {
   constructor() {
     super();
-    this.state = { balance: undefined, chosenCrypto: undefined };
+    this.state = { balance: undefined, chosenCrypto: 'Bitcoin' };
   }
 
   componentDidMount() {
@@ -32,6 +33,8 @@ export class Wallet extends Component {
     });
   }
 
+  addCrypto = () => this.props.selectedCrypto(this.state.chosenCrypto);
+
 
   render() {
     return (
@@ -52,6 +55,7 @@ export class Wallet extends Component {
           cryptos={this.props.cryptos}
           selectCrypto={this.selectCrypto}
           chosenCrypto={this.state.chosenCrypto}
+          addCrypto={this.addCrypto}
         />
       </div>
     );
@@ -62,5 +66,5 @@ export default connect(
   state => {
     return { balance: state.balance, cryptos: state.crypto };
   },
-  { fetchCryptoNames, deposit, withdraw }
+  { fetchCryptoNames, deposit, withdraw, selectedCrypto }
 )(Wallet);

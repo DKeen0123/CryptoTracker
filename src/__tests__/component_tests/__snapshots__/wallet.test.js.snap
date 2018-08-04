@@ -8,6 +8,7 @@ ShallowWrapper {
     balance={10}
     deposit={[Function]}
     fetchCryptoNames={[Function]}
+    selectedCrypto={[Function]}
     withdraw={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -40,7 +41,8 @@ ShallowWrapper {
           transaction={[Function]}
 />,
         <CryptoPicker
-          chosenCrypto={undefined}
+          addCrypto={[Function]}
+          chosenCrypto="Bitcoin"
           cryptos={undefined}
           selectCrypto={[Function]}
 />,
@@ -101,7 +103,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "chosenCrypto": undefined,
+          "addCrypto": [Function],
+          "chosenCrypto": "Bitcoin",
           "cryptos": undefined,
           "selectCrypto": [Function],
         },
@@ -136,7 +139,8 @@ ShallowWrapper {
             transaction={[Function]}
 />,
           <CryptoPicker
-            chosenCrypto={undefined}
+            addCrypto={[Function]}
+            chosenCrypto="Bitcoin"
             cryptos={undefined}
             selectCrypto={[Function]}
 />,
@@ -197,7 +201,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "chosenCrypto": undefined,
+            "addCrypto": [Function],
+            "chosenCrypto": "Bitcoin",
             "cryptos": undefined,
             "selectCrypto": [Function],
           },

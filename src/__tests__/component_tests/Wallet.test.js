@@ -5,8 +5,9 @@ import { Wallet } from '../../components/Wallet';
 describe('Wallet', () => {
   const mockDeposit = jest.fn();
   const mockWithdrawal = jest.fn();
+  const mockSelectedCrypto = jest.fn();
   const mockFetchCryptoNames = jest.fn()
-  let props = { balance: 10, deposit: mockDeposit, withdraw: mockWithdrawal, fetchCryptoNames: mockFetchCryptoNames };
+  let props = { balance: 10, deposit: mockDeposit, withdraw: mockWithdrawal, fetchCryptoNames: mockFetchCryptoNames, selectedCrypto: mockSelectedCrypto };
   let wallet = shallow(<Wallet {...props} />);
 
   it('renders correctly', () => {
@@ -58,8 +59,17 @@ describe('Wallet', () => {
     })
   });
 
+  describe('addCrypto()', () => {
+    it('fires the selectedCrypto action and gives it the chosenCrypto state', () => {
+      wallet.setState({ chosenCrypto: 'ethereum'});
+      wallet.instance().addCrypto();
+      expect(mockSelectedCrypto).toHaveBeenCalled();
+    })
+  });
+
   describe('deposit()', () => {
-     let wallet = shallow(<Wallet {...props} />);
+    wallet = shallow(<Wallet {...props} />);
+
     it('fires the deposit action recieved from props and gives it the balance state', () => {
       wallet.setState({ balance: 10 });
       wallet.instance().deposit();
@@ -105,6 +115,12 @@ describe('Wallet', () => {
     it('passes selectCrypto() down to cryptoPicker component', () => {
       expect(wallet.find('CryptoPicker').prop('selectCrypto')).toEqual(
         wallet.instance().selectCrypto
+      )
+    });
+
+    it('passes addCrypto() down to cryptoPicker component', () => {
+      expect(wallet.find('CryptoPicker').prop('addCrypto')).toEqual(
+        wallet.instance().addCrypto
       )
     });
 

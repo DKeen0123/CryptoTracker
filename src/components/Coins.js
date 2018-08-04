@@ -22,6 +22,12 @@ export class Coins extends Component {
     return this.props.balance / parseInt(ethereum[0].price_usd, 10);
   }
 
+  renderCryptos = () => {
+    return (
+      this.props.selectedCryptos.map(crypto => <h3 id={crypto} key={crypto}>{crypto}:</h3>)
+    )
+  }
+
   render() {
     return (
       <div>
@@ -29,6 +35,7 @@ export class Coins extends Component {
         <h3 className="ethereum-balance">
           Ethereum: {this.calculateEthereum()}
         </h3>
+        {this.renderCryptos()}
       </div>
     );
   }

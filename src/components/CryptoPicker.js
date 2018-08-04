@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AddButton from './AddButton';
 
 class CryptoPicker extends Component {
   constructor(props) {
@@ -28,7 +29,10 @@ class CryptoPicker extends Component {
         >
           {this.populateCryptos()}
         </select>
-
+        <AddButton
+          label="Add"
+          addCrypto={this.props.addCrypto}
+        />
       </div>
     );
   }
