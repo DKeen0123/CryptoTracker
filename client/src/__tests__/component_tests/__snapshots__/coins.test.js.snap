@@ -7,11 +7,22 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Coins
     balance={10}
     bitcoin={Object {}}
-    selectedCryptos={
-        Array [
-            "XRP",
-            "TRON",
-          ]
+    data={
+        Object {
+            "cryptoCurrencies": Array [
+              Object {
+                "amount": 0,
+                "id": 1,
+                "name": "XRP",
+              },
+              Object {
+                "amount": 0.3,
+                "id": 2,
+                "name": "TRON",
+              },
+            ],
+            "loading": false,
+          }
     }
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -44,13 +55,15 @@ ShallowWrapper {
             id="XRP"
 >
             XRP
-            :
+            : 
+            0
 </h3>,
           <h3
             id="TRON"
 >
             TRON
-            :
+            : 
+            0.3
 </h3>,
         ],
       ],
@@ -95,37 +108,41 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "XRP",
+        "key": "1",
         "nodeType": "host",
         "props": Object {
           "children": Array [
             "XRP",
-            ":",
+            ": ",
+            0,
           ],
           "id": "XRP",
         },
         "ref": null,
         "rendered": Array [
           "XRP",
-          ":",
+          ": ",
+          0,
         ],
         "type": "h3",
       },
       Object {
         "instance": null,
-        "key": "TRON",
+        "key": "2",
         "nodeType": "host",
         "props": Object {
           "children": Array [
             "TRON",
-            ":",
+            ": ",
+            0.3,
           ],
           "id": "TRON",
         },
         "ref": null,
         "rendered": Array [
           "TRON",
-          ":",
+          ": ",
+          0.3,
         ],
         "type": "h3",
       },
@@ -156,13 +173,15 @@ ShallowWrapper {
               id="XRP"
 >
               XRP
-              :
+              : 
+              0
 </h3>,
             <h3
               id="TRON"
 >
               TRON
-              :
+              : 
+              0.3
 </h3>,
           ],
         ],
@@ -207,37 +226,41 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "XRP",
+          "key": "1",
           "nodeType": "host",
           "props": Object {
             "children": Array [
               "XRP",
-              ":",
+              ": ",
+              0,
             ],
             "id": "XRP",
           },
           "ref": null,
           "rendered": Array [
             "XRP",
-            ":",
+            ": ",
+            0,
           ],
           "type": "h3",
         },
         Object {
           "instance": null,
-          "key": "TRON",
+          "key": "2",
           "nodeType": "host",
           "props": Object {
             "children": Array [
               "TRON",
-              ":",
+              ": ",
+              0.3,
             ],
             "id": "TRON",
           },
           "ref": null,
           "rendered": Array [
             "TRON",
-            ":",
+            ": ",
+            0.3,
           ],
           "type": "h3",
         },

@@ -1,12 +1,12 @@
-import selectedCryptoReducer from '../../reducers/reducer_selected_crypto';
+import selectedCryptosReducer from '../../reducers/reducer_selected_cryptos';
 import { FETCH_SELECTED_CRYPTO } from '../../actions/constants';
 
-describe('selectedCryptoReducer', () => {
+describe('selectedCryptosReducer', () => {
   const selectedCrypto = 'Bitcoin';
 
   it('fetches and sets the selected crypto', () => {
     expect(
-      selectedCryptoReducer([], { type: FETCH_SELECTED_CRYPTO, selectedCrypto })
+      selectedCryptosReducer([], { type: FETCH_SELECTED_CRYPTO, selectedCrypto })
     ).toEqual([selectedCrypto]);
   });
 });
