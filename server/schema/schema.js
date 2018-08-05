@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-const _ = require('lodash');
+const CryptoCurrency = require('../models/cryptoCurrency');
 
 const {
   GraphQLObjectType,
@@ -9,14 +9,6 @@ const {
   GraphQLFloat,
   GraphQLList
 } = graphql;
-
-//dummy data
-
-var cryptos = [
-  {name: 'Bitcoin', id: '1', amount: 1.2405},
-  {name: 'Ethereum', id: '2', amount: 3.45},
-  {name: 'XRP', id: '3', amount: 4444039.506}
-]
 
 const CryptoCurrencyType = new GraphQLObjectType({
   name: 'CryptoCurrency',
@@ -34,19 +26,39 @@ const RootQuery = new GraphQLObjectType({
       type: CryptoCurrencyType,
       args: { id: { type: GraphQLID } },
       resolve(parent, args) {
-        //code to get data from db / other source
-        return _.find(cryptos, { id: args.id });
+        return CryptoCurrency.findById(args.id)
       }
     },
     cryptoCurrencies: {
       type: new GraphQLList(CryptoCurrencyType),
       resolve(parent, args) {
-        return cryptos
+        return CryptoCurrency.find({})
       }
     }
   }
 });
 
+const Mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  fields: {
+    addCryptoCurrency: {
+      type: CryptoCurrencyType,
+      args: {
+        name: { type: GraphQLString },
+        amount: { type: GraphQLFloat }
+      },
+      resolve(parent, args) {
+        let cryptoCurrency = new CryptoCurrency({
+          name: args.name,
+          amount: args.amount
+        });
+        return cryptoCurrency.save();
+      }
+    }
+  }
+})
+
 module.exports = new GraphQLSchema({
-  query: RootQuery
+  query: RootQuery,
+  mutation: Mutation
 })
