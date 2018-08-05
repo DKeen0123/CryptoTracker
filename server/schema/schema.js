@@ -7,7 +7,8 @@ const {
   GraphQLSchema,
   GraphQLID,
   GraphQLFloat,
-  GraphQLList
+  GraphQLList,
+  GraphQLNonNull
 } = graphql;
 
 const CryptoCurrencyType = new GraphQLObjectType({
@@ -44,8 +45,12 @@ const Mutation = new GraphQLObjectType({
     addCryptoCurrency: {
       type: CryptoCurrencyType,
       args: {
-        name: { type: GraphQLString },
-        amount: { type: GraphQLFloat }
+        name: {
+          type: new GraphQLNonNull(GraphQLString)
+        },
+        amount: {
+          type: new GraphQLNonNull(GraphQLFloat)
+        }
       },
       resolve(parent, args) {
         let cryptoCurrency = new CryptoCurrency({
