@@ -20,7 +20,7 @@ ShallowWrapper {
       "children": Array [
         <Header />,
         <Connect(Wallet) />,
-        <Connect(Coins) />,
+        <Connect(Apollo(Coins)) />,
       ],
     },
     "ref": null,
@@ -64,7 +64,7 @@ ShallowWrapper {
         "children": Array [
           <Header />,
           <Connect(Wallet) />,
-          <Connect(Coins) />,
+          <Connect(Apollo(Coins)) />,
         ],
       },
       "ref": null,

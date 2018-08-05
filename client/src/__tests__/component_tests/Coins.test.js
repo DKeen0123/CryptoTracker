@@ -3,7 +3,17 @@ import { shallow, mount } from 'enzyme';
 import { Coins } from '../../components/Coins';
 
 describe('Coins', () => {
-  let props = { balance: 10, bitcoin: {}, selectedCryptos: ["XRP", "TRON"] };
+  let props = {
+    balance: 10,
+    bitcoin: {},
+    data: {
+      loading: false,
+      cryptoCurrencies: [
+        { name: "XRP", id: 1, amount: 0 },
+        { name: "TRON", id: 2, amount: 0.3 }
+      ]
+    }
+  };
   let coins = shallow(<Coins {...props} />);
 
   it('renders correctly', () => {
@@ -36,7 +46,17 @@ describe('Coins', () => {
 
     describe('when there are valid bitcoin props', () => {
       beforeEach(() => {
-        props = { balance: 10, bitcoin: [{ price_usd: '1000' }], selectedCryptos: ["XRP", "TRON"] };
+        props = {
+          balance: 10,
+          bitcoin: [{ price_usd: '1000' }],
+          data: {
+            loading: false,
+            cryptoCurrencies: [
+              { name: "XRP", id: 1, amount: 0 },
+              { name: "TRON", id: 2, amount: 0.3 }
+            ]
+          }
+  };
         coins = shallow(<Coins {...props} />);
       });
 
@@ -52,7 +72,14 @@ describe('Coins', () => {
           bitcoin: [{ price_usd: '1000' }],
           ethereum: [{
             price_usd: '500'
-          }], selectedCryptos: ["XRP", "TRON"]
+          }],
+           data: {
+            loading: false,
+            cryptoCurrencies: [
+              { name: "XRP", id: 1, amount: 0 },
+              { name: "TRON", id: 2, amount: 0.3 }
+            ]
+          }
         };
         coins = shallow(<Coins {...props} />);
       });

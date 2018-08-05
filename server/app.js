@@ -3,8 +3,12 @@ const graphqlHTTP = require('express-graphql');
 const schema = require('./schema/schema');
 const mongoose = require('mongoose');
 const keys = require('./keys.js')
+const cors = require('cors');
 
 const app = express();
+
+//allow cross-origin requests
+app.use(cors());
 
 mongoose.connect(`mongodb://${keys.DB_USER}:${keys.DB_PASSWORD}@ds113482.mlab.com:13482/crypto-tracker-dev`)
 mongoose.connection.once('open', () => {

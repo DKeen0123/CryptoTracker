@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchBitcoin } from '../actions/action_bitcoin';
 import { fetchEthereum } from '../actions/action_ethereum';
+import { gql } from 'apollo-boost';
+import { graphql, compose } from 'react-apollo';
+
+const getCryptosQuery = gql`
+  {
+    cryptoCurrencies{
+      name
+      amount
+      id
+    }
+  }
+`
 
 export class Coins extends Component {
   componentDidMount() {
@@ -23,9 +35,14 @@ export class Coins extends Component {
   }
 
   renderCryptos = () => {
-    return (
-      this.props.selectedCryptos.map(crypto => <h3 id={crypto} key={crypto}>{crypto}:</h3>)
-    )
+    var data = this.props.data;
+    if (data.loading) {
+      return( <div>Loading cryptos...</div>)
+    } else {
+      return (
+      data.cryptoCurrencies.map(crypto => <h3 id={crypto.name} key={crypto.id}>{crypto.name}: {crypto.amount}</h3>)
+      )
+    }
   }
 
   render() {
@@ -41,4 +58,6 @@ export class Coins extends Component {
   }
 }
 
-export default connect(state => state, { fetchBitcoin, fetchEthereum })(Coins);
+const gqlWrapper = graphql(getCryptosQuery)
+const reduxWrapper = connect(state => state, { fetchBitcoin, fetchEthereum })
+export default compose(reduxWrapper, gqlWrapper)(Coins);

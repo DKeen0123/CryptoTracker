@@ -18,6 +18,6 @@ describe('Wrapper', () => {
   });
 
   it('renders a connected Coins component', () => {
-    expect(wrapper.find('Connect(Coins)').exists()).toBe(true);
+    expect(wrapper.find('Connect(Apollo(Coins))').exists()).toBe(true);
   });
 });
