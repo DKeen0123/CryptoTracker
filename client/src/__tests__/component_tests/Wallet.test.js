@@ -39,17 +39,17 @@ describe('Wallet', () => {
       expect(wallet.find('.btn-withdraw').prop('label')).toEqual('Withdraw');
     });
 
-    it('passes the transaction function down to the deposit button', () => {
-      expect(wallet.find('.btn-deposit').prop('transaction')).toEqual(
-        wallet.instance().transaction
-      );
-    });
+    // it('passes the transaction function down to the deposit button', () => {
+    //   expect(wallet.find('.btn-deposit').prop('transaction')).toEqual(
+    //     wallet.instance().transaction
+    //   );
+    // });
 
-    it('passes the transaction function down to the withdraw button', () => {
-      expect(wallet.find('.btn-withdraw').prop('transaction')).toEqual(
-        wallet.instance().transaction
-      );
-    });
+    // it('passes the transaction function down to the withdraw button', () => {
+    //   expect(wallet.find('.btn-withdraw').prop('transaction')).toEqual(
+    //     wallet.instance().transaction
+    //   );
+    // });
   });
 
   describe('selectCrypto()', () => {
@@ -59,46 +59,28 @@ describe('Wallet', () => {
     })
   });
 
-  describe('addCrypto()', () => {
-    it('fires the selectedCrypto action and gives it the chosenCrypto state', () => {
-      wallet.setState({ chosenCrypto: 'ethereum'});
-      wallet.instance().addCrypto();
-      expect(mockSelectedCrypto).toHaveBeenCalled();
-    })
-  });
+  // describe('addCrypto()', () => {
+  //   it('fires the selectedCrypto action and gives it the chosenCrypto state', () => {
+  //     wallet.setState({ chosenCrypto: 'ethereum'});
+  //     wallet.instance().addCrypto();
+  //     expect(mockSelectedCrypto).toHaveBeenCalled();
+  //   })
+  // });
 
-  describe('deposit()', () => {
-    wallet = shallow(<Wallet {...props} />);
+  // describe('transaction()', () => {
+  //   let wallet = mount(<Wallet {...props} />);
+  //   it('fires the deposit function when passed the string deposit', () => {
+  //     jest.spyOn(wallet.instance(), 'deposit')
+  //     wallet.instance().transaction('Deposit');
+  //     expect(wallet.instance().deposit).toHaveBeenCalled()
+  //   })
 
-    it('fires the deposit action recieved from props and gives it the balance state', () => {
-      wallet.setState({ balance: 10 });
-      wallet.instance().deposit();
-      expect(mockDeposit).toHaveBeenCalled();
-    });
-  });
-
-  describe('withdraw()', () => {
-    it('fires the withdraw action recieved from props and gives it the balance state', () => {
-      wallet.setState({ balance: 10 });
-      wallet.instance().withdraw();
-      expect(mockWithdrawal).toHaveBeenCalled();
-    });
-  });
-
-  describe('transaction()', () => {
-    let wallet = mount(<Wallet {...props} />);
-    it('fires the deposit function when passed the string deposit', () => {
-      jest.spyOn(wallet.instance(), 'deposit')
-      wallet.instance().transaction('Deposit');
-      expect(wallet.instance().deposit).toHaveBeenCalled()
-    })
-
-    it('fires the deposit function when passed the string deposit', () => {
-      jest.spyOn(wallet.instance(), 'withdraw')
-      wallet.instance().transaction('Withdraw');
-      expect(wallet.instance().withdraw).toHaveBeenCalled()
-    })
-  });
+    // it('fires the withdraw function when passed the string deposit', () => {
+    //   jest.spyOn(wallet.instance(), 'withdraw')
+    //   wallet.instance().transaction('Withdraw');
+    //   expect(wallet.instance().withdraw).toHaveBeenCalled()
+    // })
+  // });
 
   describe('passing Props', () => {
     let wallet = shallow(<Wallet {...props} />);

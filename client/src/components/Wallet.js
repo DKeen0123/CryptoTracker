@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { deposit, withdraw } from '../actions/action_balance';
 import CryptoPicker from './CryptoPicker';
 import Balance from './Balance';
 import Button from './Button';
 import ChangeBalance from './ChangeBalance';
 import { fetchCryptoNames } from '../actions/action_crypto';
-import selectedCrypto from '../actions/action_selected_crypto';
 
 export class Wallet extends Component {
   constructor() {
@@ -21,9 +19,6 @@ export class Wallet extends Component {
   handleUpdateBalance = event =>
     this.setState({ balance: parseInt(event.target.value, 10) });
 
-  deposit = () => this.props.deposit(this.state.balance);
-  withdraw = () => this.props.withdraw(this.state.balance);
-
   transaction = transactionType =>
     transactionType === 'Deposit'? this.deposit() : this.withdraw();
 
@@ -33,7 +28,7 @@ export class Wallet extends Component {
     });
   }
 
-  addCrypto = () => this.props.selectedCrypto(this.state.chosenCrypto);
+  // addCrypto = () => this.props.selectedCrypto(this.state.chosenCrypto);
 
 
   render() {
@@ -44,12 +39,12 @@ export class Wallet extends Component {
         <Button
           label="Deposit"
           className="btn-deposit"
-          transaction={this.transaction}
+          // transaction={this.transaction}
         />
         <Button
           label="Withdraw"
           className="btn-withdraw"
-          transaction={this.transaction}
+          // transaction={this.transaction}
         />
         <CryptoPicker
           cryptos={this.props.cryptos}
@@ -66,5 +61,5 @@ export default connect(
   state => {
     return { balance: state.balance, cryptos: state.crypto };
   },
-  { fetchCryptoNames, deposit, withdraw, selectedCrypto }
+  { fetchCryptoNames }
 )(Wallet);
